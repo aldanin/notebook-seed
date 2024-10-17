@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"module": "ESNext",
+		"target": "ES2019",
+		"lib": [
+			"ES2019"
+		],
+		"types": [
+			"node"
+		],
+		"sourceMap": true,
+		"strict": true,
+		"moduleResolution": "Node",
+		"noUnusedParameters": true,
+		"skipLibCheck": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitAny": false
+	}
+}
