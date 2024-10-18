@@ -9,7 +9,7 @@
 		"url": "https://github.com/microsoft/vscode-github-issue-notebooks"
 	},
 	"engines": {
-		"vscode": "^1.72.0-insider"
+		"vscode": "^1.94.0"
 	},
 	"categories": [
 		"Other"
@@ -58,7 +58,8 @@
 	"scripts": {
 		"lint": "eslint --config .eslintrc.json ./src/**/*.ts",
 		"vscode:prepublish": "npm run webpack-compile",
-		"compile": "webpack --mode none --no-cache",
+		"compile": "npm run webpack-compile",
+		"webpack-compile": "webpack --mode none --no-cache",
 		"webpack-watch": "webpack --mode none --watch",
 		"ts-compile": "tsc -b",
 		"integration-test": "npm run ts-compile && node ./out/test/test-integration/runTest.js",
