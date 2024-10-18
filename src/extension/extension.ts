@@ -4,7 +4,6 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as vscode from 'vscode';
-import { registerCommands } from './commands';
 import { MyNotebookSerializer } from './parser/serializers/serializer';
 import { SeedKernel } from './seed-kernel';
 import { CODE_CELL_PLACEHOLDER } from '../common/seed.model';
@@ -20,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(new SeedKernel());
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("seed-issues:new", async () => {
+		vscode.commands.registerCommand("seed-items:new", async () => {
 			const newNotebook = await vscode.workspace.openNotebookDocument(
 				"seed-notebook",
 				new vscode.NotebookData([
@@ -43,8 +42,6 @@ export function activate(context: vscode.ExtensionContext) {
 			);
 		})
 	);
-
-	context.subscriptions.push(registerCommands());
 
 	// Add the place holder for each new code cell:
 	vscode.workspace.onDidChangeNotebookDocument((event: vscode.NotebookDocumentChangeEvent) => {

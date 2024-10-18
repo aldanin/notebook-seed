@@ -22,7 +22,7 @@
 	},
 	"icon": "icon.png",
 	"activationEvents": [
-		"onNotebook:github-issues"
+		"onNotebook"
 	],
 	"main": "./dist/extension-node.js",
 	"l10n": "./l10n",
@@ -50,7 +50,7 @@
 		],
 		"commands": [
 			{
-				"command": "seed-issues:new",
+				"command": "seed-items:new",
 				"title": "New Seed notebook"
 			}
 		]
