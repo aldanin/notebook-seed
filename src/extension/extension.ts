@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 				new vscode.NotebookData([
 					new vscode.NotebookCellData(
 						vscode.NotebookCellKind.Markup,
-						"## Enter a seed user",
+						"## Enter your name",
 						"markdown"
 					),
 					new vscode.NotebookCellData(
