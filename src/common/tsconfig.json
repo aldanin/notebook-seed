@@ -1,3 +1,10 @@
 {
 	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"esModuleInterop": true,
+		"lib": [
+			"ES2019",
+			"DOM"
+		]
+	}
 }
