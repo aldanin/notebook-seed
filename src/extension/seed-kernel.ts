@@ -1,6 +1,6 @@
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 import vscode from "vscode";
-import { CODE_CELL_PLACEHOLDER } from "../common/seed.model";
+import { CODE_CELL_PLACEHOLDER } from "../common/common.model";
 
 export class SeedKernel {
   private _controller;

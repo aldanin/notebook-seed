@@ -5,7 +5,7 @@
 
 import * as vscode from 'vscode';
 import { NotebookDocumentContentChange } from 'vscode';
-import { CODE_CELL_PLACEHOLDER } from '../common/seed.model';
+import { CODE_CELL_PLACEHOLDER } from '../common/common.model';
 import { MyNotebookSerializer } from './parser/serializers/serializer';
 import { SeedKernel } from './seed-kernel';
 export function activate(context: vscode.ExtensionContext) {

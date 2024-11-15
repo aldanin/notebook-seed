@@ -8,8 +8,5 @@
 			"dom"
 		],
 		"rootDir": "./../../src",
-	},
-	"files": [
-		"../common/seed.model.ts"
-	]
+	}
 }

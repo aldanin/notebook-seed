@@ -3,7 +3,7 @@ import type {
   RendererApi,
   RendererContext,
 } from "vscode-notebook-renderer";
-import { SeedItem } from "../common/seed.model";
+import { SeedItem } from "./seed.model";
 
 
 interface IRenderInfo {

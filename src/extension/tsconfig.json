@@ -10,6 +10,6 @@
 		"rootDir": "./../../src",
 	},
 	"files": [
-		"../common/seed.model.ts"
+		"../common/common.model.ts"
 	]
 }
