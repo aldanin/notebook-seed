@@ -6,8 +6,8 @@
 import * as vscode from 'vscode';
 import { NotebookDocumentContentChange } from 'vscode';
 import { CODE_CELL_PLACEHOLDER } from '../common/common.model';
-import { MyNotebookSerializer } from './parser/serializers/serializer';
-import { SeedKernel } from './seed-kernel';
+import { SeedKernel } from './kernels/seed-kernel';
+import { MyNotebookSerializer } from './serializers/serializer';
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.workspace.registerNotebookSerializer(

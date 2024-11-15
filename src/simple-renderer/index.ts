@@ -3,9 +3,11 @@ import type {
   RendererApi,
   RendererContext,
 } from "vscode-notebook-renderer";
+import rendererCss from "./renderer.css";
+import { getStyleTag } from "../common/renderers.helpers";
 import { SeedItem } from "./seed.model";
 
-
+const css = rendererCss;
 interface IRenderInfo {
   container: HTMLElement;
   mime?: string;
@@ -14,14 +16,21 @@ interface IRenderInfo {
 }
 
 export function activate(context: RendererContext<void>): RendererApi {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = './renderer.css';
-  document.head.appendChild(link);
   return {
     renderOutputItem(output: OutputItem, element: HTMLElement) {
+      let shadow = element.shadowRoot;
+      if (!shadow) {
+        shadow = element.attachShadow({ mode: "open" });
+
+        shadow.append(getStyleTag(css).cloneNode(true));
+
+        const root = document.createElement("div");
+        root.id = "root";
+        shadow.append(root);
+      }
+
       const items: SeedItem[] = output.json();
-      render({ container: element, value: items, context });
+      render({ container: shadow.querySelector("#root")!, value: items, context });
     },
   };
 }
@@ -34,7 +43,7 @@ export function render({ container, value: items }: IRenderInfo) {
     const spanDiv = document.createElement("div");
     const span: HTMLSpanElement = document.createElement("span");
     span.innerText = `Hello, ${item.title}`;
-    span.style.color = "#5ab2ff";
+    // span.style.color = "#5ab2ff";
     span.style.fontSize = "16px";
     span.className = "item-row";
 

@@ -57,15 +57,12 @@ const nodeConfig = {
   },
 };
 
-const simpleRendererConfig = getRendererConfig(
-  "simple-renderer",
-  "simple-renderer.ts"
-);
+const simpleRendererConfig = getRendererConfig("simple-renderer", "index.ts");
 
-function getRendererConfig(rendererName, entryFile = "index.tsx") {
+function getRendererConfig(rendererName, fileName = "index.tsx") {
   const gitHubRendererConfig = {
     ...config,
-    entry: `./src/${rendererName}/${entryFile}`,
+    entry: `./src/${rendererName}/${fileName}`,
     output: {
       path: path.resolve(__dirname, "dist"),
       filename: `${rendererName}.js`,
@@ -187,7 +184,7 @@ module.exports = (env, argv) => {
       target: "webworker",
     }),
     // makeConfig(argv, {
-    //   entry: "./src/simple-renderer/simple-renderer.ts",
+    //   entry: "./src/simple-renderer/index.tsx",
     //   out: "./dist/simple-renderer.js",
     //   target: "web",
     //   library: "module",

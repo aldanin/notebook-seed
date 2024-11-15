@@ -1,0 +1,9 @@
+:host {
+  --primary-color: #3498db;
+  --font-size: 16px;
+}
+
+.item-row {
+  color: var(--primary-color);
+  font-size: var( --font-size);
+}
