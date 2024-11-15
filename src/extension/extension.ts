@@ -4,10 +4,10 @@
  *--------------------------------------------------------------------------------------------*/
 
 import * as vscode from 'vscode';
+import { NotebookDocumentContentChange } from 'vscode';
+import { CODE_CELL_PLACEHOLDER } from '../common/seed.model';
 import { MyNotebookSerializer } from './parser/serializers/serializer';
 import { SeedKernel } from './seed-kernel';
-import { CODE_CELL_PLACEHOLDER } from '../common/seed.model';
-import { NotebookDocumentContentChange } from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.workspace.registerNotebookSerializer(
@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 				new vscode.NotebookData([
 					new vscode.NotebookCellData(
 						vscode.NotebookCellKind.Markup,
-						"## Enter your name",
+						"## Notebook Seed with rendrer",
 						"markdown"
 					),
 					new vscode.NotebookCellData(

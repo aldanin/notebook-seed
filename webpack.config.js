@@ -181,8 +181,8 @@ module.exports = (env, argv) => {
       target: "webworker",
     }),
     makeConfig(argv, {
-      entry: "./src/extension/simple-renderer.ts",
-      out: "./dist/extension/simple-renderer.js",
+      entry: "./src/simple-renderer/simple-renderer.ts",
+      out: "./dist/simple-renderer.js",
       target: "web",
       library: "module",
     }),
