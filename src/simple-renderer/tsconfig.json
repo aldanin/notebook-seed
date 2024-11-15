@@ -1,12 +1,10 @@
 {
 	"extends": "../../tsconfig.base.json",
 	"compilerOptions": {
-		"composite": true,
-		"outDir": "../../out/src/simple-renderer",
+		"rootDir": "./../../src",
 		"lib": [
 			"ES2019",
 			"dom"
-		],
-		"rootDir": "./../../src",
+		]
 	}
 }
