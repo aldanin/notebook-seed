@@ -1,4 +1,4 @@
-# Seed Notgebook
+# Seed Notebook
 
 This is an initial setup for starting a VS Code notebook extension. It has all the necessary aspects - renderer, kernel, serializer
 
