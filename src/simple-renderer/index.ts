@@ -43,8 +43,6 @@ export function render({ container, value: items }: IRenderInfo) {
     const spanDiv = document.createElement("div");
     const span: HTMLSpanElement = document.createElement("span");
     span.innerText = `Hello, ${item.title}`;
-    // span.style.color = "#5ab2ff";
-    span.style.fontSize = "16px";
     span.className = "item-row";
 
     spanDiv.appendChild(span);
