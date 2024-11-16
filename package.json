@@ -1,7 +1,7 @@
 {
-	"name": "vscode-github-issue-notebooks",
+	"name": "vscode-seed-notebook",
 	"displayName": "Seed Notebooks",
-	"description": "Seed Notebooks for VS Code",
+	"description": "Seed notebooks extension for VS Code",
 	"publisher": "ms-vscode",
 	"preview": true,
 	"version": "0.0.1",
