@@ -7,9 +7,9 @@ export class SeedKernel {
 
   constructor() {
     this._controller = vscode.notebooks.createNotebookController(
-      "seed-notebook-controller",
+      "seed-notebook-kernel",
       "seed-notebook",
-      "seed Notebook Controller"
+      "seed Notebook Kernel"
     );
 
     this._controller.executeHandler = async (cells, _notebook, _controller) => {
