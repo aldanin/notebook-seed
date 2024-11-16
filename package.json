@@ -2,7 +2,7 @@
 	"name": "vscode-seed-notebook",
 	"displayName": "Seed Notebooks",
 	"description": "Seed notebooks extension for VS Code",
-	"publisher": "ms-vscode",
+	"publisher": "cognyte ltd.",
 	"preview": true,
 	"version": "0.0.1",
 	"repository": {
