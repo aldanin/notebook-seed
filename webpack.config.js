@@ -183,11 +183,5 @@ module.exports = (env, argv) => {
       out: "./dist/extension/extension.web.js",
       target: "webworker",
     }),
-    // makeConfig(argv, {
-    //   entry: "./src/simple-renderer/index.tsx",
-    //   out: "./dist/simple-renderer.js",
-    //   target: "web",
-    //   library: "module",
-    // }),
   ];
 };
