@@ -3,8 +3,8 @@ import type {
   RendererApi,
   RendererContext,
 } from "vscode-notebook-renderer";
-import rendererCss from "./renderer.css";
 import { getStyleTag } from "../common/renderers.helpers";
+import rendererCss from "./renderer.css";
 import { SeedItem } from "./seed.model";
 
 const css = rendererCss;
@@ -30,7 +30,11 @@ export function activate(context: RendererContext<void>): RendererApi {
       }
 
       const items: SeedItem[] = output.json();
-      render({ container: shadow.querySelector("#root")!, value: items, context });
+      render({
+        container: shadow.querySelector("#root")!,
+        value: items,
+        context,
+      });
     },
   };
 }
@@ -41,11 +45,18 @@ export function render({ container, value: items }: IRenderInfo) {
   const codeDiv = document.createElement("div");
   items.forEach((item) => {
     const spanDiv = document.createElement("div");
-    const span: HTMLSpanElement = document.createElement("span");
-    span.innerText = `Hello, ${item.title}`;
-    span.className = "item-row";
+    spanDiv.className = "item-row";
 
-    spanDiv.appendChild(span);
+    const span1: HTMLSpanElement = document.createElement("span");
+    span1.innerText = `Hello, `;
+    span1.className = `item-row-caption`;
+
+    const span2: HTMLSpanElement = document.createElement("span");
+    span2.innerText = item.title;
+    span2.className = `item-row-title`;
+
+    spanDiv.appendChild(span1);
+    spanDiv.appendChild(span2);
 
     codeDiv.append(spanDiv);
   });
